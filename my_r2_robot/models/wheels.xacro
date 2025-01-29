@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:macro name="wheel" params="pos_side ixx ixy ixz iyy iyz izz ixyz pkg jxyz jrpy axyz">  
+  <link
+    name="${pos_side}">
+    <inertial>
+      <origin
+        xyz="${ixyz}"
+        rpy="0 0 0" />
+      <mass
+        value="0.126676869774374" />
+      <inertia
+        ixx="${ixx}"
+        ixy="${ixy}"
+        ixz="${ixz}"
+        iyy="${iyy}"
+        iyz="${iyz}"
+        izz="${izz}" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://${pkg}/meshes/${pos_side}_visual.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://${pkg}/meshes/${pos_side}.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="${pos_side}_joint"
+    type="continuous">
+    <origin
+      xyz="${jxyz}"
+      rpy="${jrpy}" />
+    <parent
+      link="base_link" />
+    <child
+      link="${pos_side}" />
+    <axis
+      xyz="${axyz}" />
+  </joint>
+</xacro:macro> 
+</robot>

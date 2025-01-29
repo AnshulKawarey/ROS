@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="r2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-2.4559E-05 0.079296 0.18935"
+        rpy="0 0 0" />
+      <mass
+        value="23.752" />
+      <inertia
+        ixx="0.019784"
+        ixy="0"
+        ixz="0"
+        iyy="0.013558"
+        iyz="0"
+        izz="0.014782" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 1.5708" />
+      <geometry>
+        <mesh
+          filename="package://r2/meshes/r2.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 -0.011"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_left">
+    <inertial>
+      <origin
+        xyz="3.62457407724337E-05 0.00129082749548115 0.00598788525547711"
+        rpy="0 0 0" />
+      <mass
+        value="0.316692174435936" />
+      <inertia
+        ixx="0.000638491010184651"
+        ixy="0"
+        ixz="-2.72054661110847E-20"
+        iyy="0.00033573988917753"
+        iyz="-9.33352437889943E-20"
+        izz="0.00033573988917753" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 1.5708" />
+      <geometry>
+        <mesh
+          filename="package://r2/meshes/front_left_visual.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 -0.006"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r2/meshes/front_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.23885 0.24067 0.057012"
+      rpy="0 0 2.3562" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left" />
+    <axis
+      xyz="1 0 0" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="back_left">
+    <inertial>
+      <origin
+        xyz="0.00129082749548114 -3.62457407724337E-05 0.00598788525547686"
+        rpy="0 0 0" />
+      <mass
+        value="0.316692174435936" />
+      <inertia
+        ixx="0.000638491010184652"
+        ixy="-1.76182853028894E-19"
+        ixz="2.30935074418826E-19"
+        iyy="0.000335739889177531"
+        iyz="1.2477973768582E-20"
+        izz="0.000335739889177531" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 1.5708" />
+      <geometry>
+        <mesh
+          filename="package://r2/meshes/back_left_visual.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 -0.006"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r2/meshes/back_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.23885 -0.2389 0.057012"
+      rpy="0 0 -2.3562" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_left" />
+    <axis
+      xyz="1 0 0" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="back_right">
+    <inertial>
+      <origin
+        xyz="-3.62457407724059E-05 -0.00129082749548132 0.00598788525547689"
+        rpy="0 0 0" />
+      <mass
+        value="0.316692174435936" />
+      <inertia
+        ixx="0.000638491010184653"
+        ixy="6.7762635780344E-20"
+        ixz="-6.64335653201319E-20"
+        iyy="0.000335739889177531"
+        iyz="4.99118950743322E-22"
+        izz="0.000335739889177531" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 1.5708" />
+      <geometry>
+        <mesh
+          filename="package://r2/meshes/back_right_visual.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 -0.006"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r2/meshes/back_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_right_joint"
+    type="continuous">
+    <origin
+      xyz="0.24072 -0.2389 0.057012"
+      rpy="0 0 -0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_right" />
+    <axis
+      xyz="1 0 0" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="front_right">
+    <inertial>
+      <origin
+        xyz="-0.00129082749548137 3.62457407725725E-05 0.00598788525547689"
+        rpy="0 0 0" />
+      <mass
+        value="0.316692174435936" />
+      <inertia
+        ixx="0.000638491010184652"
+        ixy="5.42101086242752E-20"
+        ixz="1.54644884199612E-19"
+        iyy="0.000335739889177531"
+        iyz="2.04638769804749E-20"
+        izz="0.000335739889177531" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 1.5708" />
+      <geometry>
+        <mesh
+          filename="package://r2/meshes/front_right_visual.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 -0.006"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r2/meshes/front_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_joint"
+    type="continuous">
+    <origin
+      xyz="0.24072 0.24067 0.057012"
+      rpy="0 0 0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right" />
+    <axis
+      xyz="1 0 0" />
+    <dynamics
+      friction="1" />
+  </joint>
+  <link
+    name="camera">
+    <inertial>
+      <origin
+        xyz="-0.000935586981284306 -0.00431065419746651 0.0184588575878352"
+        rpy="0 0 0" />
+      <mass
+        value="0.152248582067584" />
+      <inertia
+        ixx="2.28162451989774E-05"
+        ixy="-2.04183802129697E-09"
+        ixz="-6.37754261206263E-09"
+        iyy="0.000372334061892829"
+        iyz="-1.51892484277487E-07"
+        izz="0.000374734574404034" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r2/meshes/camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.101960784313725 0.101960784313725 0.101960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r2/meshes/camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_joint"
+    type="fixed">
+    <origin
+      xyz="0.00093838 0.24497 0.46519"
+      rpy="-0.34907 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
